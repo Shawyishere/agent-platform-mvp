@@ -67,7 +67,7 @@ function render(){snapshotViews=new Map();snapshotViewId=0;document.querySelecto
 function workspace(){
   const live=state.agents.filter(a=>!a.stopped&&!a.manual).length;
   return `<section class="guide review-start" aria-labelledby="workspace-title">
-    <div class="review-heading"><div><div class="eyebrow">AGENT STUDIO / 统一 Agent 工作台</div><h1 id="workspace-title">一条平台主链路，三种发布策略</h1></div>${button('开始评审 →','start-review','data-type="A"')}</div>
+    <div class="review-heading"><div><div class="eyebrow">AGENT STUDIO / 统一 Agent 工作台</div><h1 id="workspace-title"><span>一条平台主链路，</span><span>三种发布策略</span></h1></div>${button('开始评审 →','start-review','data-type="A"')}</div>
     <ol class="journey" aria-label="平台主链路"><li><span class="journey-number">01</span><span>配置与调试</span></li><li><span class="journey-number">02</span><span>版本绑定评测</span></li><li><span class="journey-number">03</span><span>按风险发布</span></li><li><span class="journey-number">04</span><span>观测、回退与沉淀</span></li></ol>
     <div class="review-routes">
       <article class="review-route route-a"><div class="route-heading"><span class="route-team">A</span><h2>穿搭灵感</h2><span class="route-category">发布闭环</span></div><p>缺陷被拦 → 标准通过 → 灰度 → 放量 → 注入异常 → 回滚</p>${button('评审 A →','start-review','data-type="A"','link small')}</article>
