@@ -286,25 +286,41 @@ dialog h2 { font-size: 23px; margin-bottom: 14px; }
   * { transition: none !important; scroll-behavior: auto !important; }
 }
 
-.review-start { margin-top: 0; padding: 24px 28px; }
+.review-start { margin-top: 0; padding: 28px; background: linear-gradient(125deg, #f0f5ff 0%, #f8faff 65%, #edf5ff 100%); border: 1px solid rgba(70, 115, 185, .07); border-radius: 20px; }
 .review-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.review-heading h1 { font-size: 25px; margin: 0; }
-.review-heading .eyebrow { font-size: 11px; margin-bottom: 6px; }
-.review-start .journey { margin: 14px 0 20px; }
-.review-routes { border-top: 1px solid rgba(53, 98, 165, .08); padding-top: 16px; display: grid; gap: 10px; }
-.review-routes > div { display: flex; align-items: baseline; gap: 12px; }
-.route-team { color: var(--blue); font-size: 12px; font-weight: 600; flex: 0 0 22px; text-align: center; background: #e0ecff; border-radius: 5px; }
-.review-routes p { flex: 1; font-size: 13px; }
-.review-routes strong { color: var(--text); font-weight: 500; margin-right: 14px; }
+.review-heading h1 { font-size: 25px; font-weight: 500; letter-spacing: -.025em; margin: 0; }
+.review-heading .eyebrow { color: #5f6e84; font-size: 10px; letter-spacing: 1.8px; margin-bottom: 8px; }
+.review-heading > .btn { padding: 11px 21px; border-radius: 10px; box-shadow: 0 5px 12px rgba(0, 82, 217, .12); }
+.review-start .journey { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; padding: 0; margin: 24px 0; gap: 16px; }
+.review-start .journey li { display: flex; align-items: center; gap: 10px; position: relative; color: #536a89; font-size: 13px; }
+.journey-number { display: grid; place-items: center; width: 29px; height: 29px; flex: 0 0 29px; border-radius: 50%; background: rgba(255,255,255,.85); color: #6281af; font-size: 11px; font-variant-numeric: tabular-nums; box-shadow: 0 2px 6px rgba(44, 80, 138, .035); }
+.review-start .journey li:not(:last-child)::after { content: "→"; color: #b4c4db; margin-left: auto; padding-right: 10px; }
+.review-routes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.review-route { display: flex; flex-direction: column; align-items: flex-start; padding: 20px; border-radius: 13px; background: rgba(255,255,255,.9); border: 1px solid rgba(48, 85, 140, .045); box-shadow: 0 4px 16px rgba(43, 75, 124, .025); }
+.route-heading { display: flex; align-items: center; gap: 9px; width: 100%; margin-bottom: 12px; }
+.route-team { display: grid; place-items: center; width: 28px; height: 28px; flex: 0 0 28px; border-radius: 8px; color: #3271ce; background: #edf4ff; font-size: 13px; font-weight: 500; }
+.route-b .route-team { color: #7066ba; background: #f1effb; }
+.route-c .route-team { color: #368b86; background: #edf8f6; }
+.route-heading h2 { margin: 0; font-size: 15px; font-weight: 500; }
+.route-category { font-size: 10px; color: #5f6e84; margin-left: auto; white-space: nowrap; }
+.review-route p { font-size: 12px; color: #5f6e84; line-height: 1.9; margin: 0 0 16px; }
+.review-route .btn { margin-top: auto; font-size: 12px; font-weight: 500; }
 .card-strategy { margin: 0 0 22px; }
 .card-strategy > span { display: block; color: var(--muted); font-size: 11px; margin-bottom: 4px; }
 .card-strategy p { margin: 0; color: #345a91; font-size: 13px; font-weight: 500; }
-@media (max-width: 760px) {
-  .review-start { padding: 22px; }
-  .review-heading { align-items: flex-start; flex-wrap: wrap; gap: 14px; }
+@media (max-width: 1000px) {
+  .route-category { display: none; }
+  .review-route { padding: 17px; }
+  .review-start .journey li:not(:last-child)::after { display: none; }
+}
+@media (max-width: 640px) {
+  .review-start { padding: 22px; border-radius: 16px; }
+  .review-heading { align-items: flex-start; flex-wrap: wrap; gap: 16px; }
   .review-heading h1 { font-size: 23px; }
-  .review-routes > div { flex-wrap: wrap; gap: 6px 10px; }
-  .review-routes p { min-width: calc(100% - 34px); }
-  .review-routes strong { display: block; margin-bottom: 3px; }
-  .review-routes .btn { margin-left: 32px; }
+  .review-start .journey { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 10px; margin: 22px 0; }
+  .review-start .journey li { font-size: 11px; gap: 7px; }
+  .journey-number { width: 25px; height: 25px; flex-basis: 25px; font-size: 10px; }
+  .review-routes { grid-template-columns: 1fr; gap: 10px; }
+  .review-route { padding: 17px 18px; }
+  .route-category { display: block; }
 }
