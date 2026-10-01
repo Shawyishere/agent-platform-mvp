@@ -1,8 +1,31 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Agent Studio · 统一 Agent 基建平台</title><link rel="stylesheet" href="styles.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0052d9">
+  <meta name="description" content="Agent Studio：构建、评测、发布与持续迭代的统一 Agent 工作台。可交互的纯前端需求评审 Demo。">
+  <title>Agent Studio · 统一 Agent 基建平台</title>
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
 <body>
-  <aside class="sidebar"><a class="brand" href="#" data-action="view" data-view="workspace"><span class="brand-icon">A</span><span>AGENT<span class="brand-sub">STUDIO</span></span></a><span class="nav-label">构建与运营</span><nav aria-label="主导航"><button data-action="view" data-view="workspace">▦ <span>Agent 工作台</span></button><button data-action="view" data-view="assets">◇ <span>共享资产</span></button><button data-action="view" data-view="audit">≡ <span>操作审计</span></button></nav><div class="sidebar-bottom"><span class="status-dot"></span> 本地评审空间<br><small>所有操作仅保存在此浏览器</small><button class="reset" data-action="reset">↺ 重置演示</button></div></aside>
-  <div class="shell"><div class="demo-banner"><span>评审 Demo</span>全部数据与角色为模拟，无真实模型与生产服务</div><header class="topbar"><div>研发平台 <span class="crumb">/</span> Agent Studio</div><label class="role-label">演示角色<select id="role" aria-label="切换演示角色"><option value="owner">业务负责人</option><option value="reviewer">独立审核人</option></select></label></header><main id="app"></main><footer>统一骨架 · 按风险配置发布策略 <span>纯前端原型 / 不验证真实生产容量</span></footer></div>
-  <div id="toast" role="status" aria-live="polite"></div><dialog id="modal"><div id="modal-body"></div><button class="btn secondary modal-close" data-action="close-modal">关闭</button></dialog><script src="app.js"></script>
-</body></html>
+  <header class="sidebar">
+    <a class="brand" href="#" data-action="view" data-view="workspace" aria-label="Agent Studio 工作台"><span class="brand-icon">A</span><span>Agent Studio<span class="brand-sub">统一智能体平台</span></span></a>
+    <nav aria-label="主导航">
+      <button data-action="view" data-view="workspace"><span>Agent 工作台</span></button>
+      <button data-action="view" data-view="assets"><span>共享资产</span></button>
+      <button data-action="view" data-view="audit"><span>操作审计</span></button>
+    </nav>
+    <div class="sidebar-bottom"><span class="space-label">本地评审空间</span><button class="reset" data-action="reset">重置演示</button></div>
+  </header>
+  <div class="shell">
+    <div class="demo-banner"><span>评审 Demo</span>全部数据与角色为模拟，无真实模型与生产服务</div>
+    <div class="topbar"><div>研发平台 <span class="crumb">/</span> Agent Studio</div><label class="role-label">演示角色<select id="role" aria-label="切换演示角色"><option value="owner">业务负责人</option><option value="reviewer">独立审核人</option></select></label></div>
+    <main id="app"></main>
+    <footer><a href="#" data-action="view" data-view="workspace">Agent Studio</a><span>统一骨架 · 按风险配置发布策略</span><span>纯前端原型 · 所有操作仅保存在此浏览器</span></footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="modal"><div id="modal-body"></div><button class="btn secondary modal-close" data-action="close-modal">关闭</button></dialog>
+  <script src="app.js?v=2"></script>
+</body>
+</html>
