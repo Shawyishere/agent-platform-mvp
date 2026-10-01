@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0052d9">
   <meta name="description" content="Agent Studio：构建、评测、发布与持续迭代的统一 Agent 工作台。可交互的纯前端需求评审 Demo。">
   <title>Agent Studio · 统一 Agent 基建平台</title>
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
   <header class="sidebar">
@@ -16,16 +16,16 @@
       <button data-action="view" data-view="assets"><span>共享资产</span></button>
       <button data-action="view" data-view="audit"><span>操作审计</span></button>
     </nav>
-    <div class="sidebar-bottom"><span class="space-label">本地评审空间</span><button class="reset" data-action="reset">重置演示</button></div>
+    <div class="sidebar-bottom"><span class="space-label">本地评审空间</span><button class="reset" data-action="reset">重置进度</button></div>
   </header>
   <div class="shell">
-    <div class="demo-banner"><span>评审 Demo</span>全部数据与角色为模拟，无真实模型与生产服务</div>
-    <div class="topbar"><div>研发平台 <span class="crumb">/</span> Agent Studio</div><label class="role-label">演示角色<select id="role" aria-label="切换演示角色"><option value="owner">业务负责人</option><option value="reviewer">独立审核人</option></select></label></div>
+    <div class="demo-banner"><span>评审 Demo</span>全部数据与角色为模拟，无真实模型与生产服务；进度保存在当前浏览器</div>
+    <div class="topbar"><div>研发平台 <span class="crumb">/</span> Agent Studio</div><label class="role-label">当前角色<select id="role" aria-label="切换角色"><option value="owner">业务负责人</option><option value="reviewer">独立审核人</option></select></label></div>
     <main id="app"></main>
-    <footer><a href="#" data-action="view" data-view="workspace">Agent Studio</a><span>统一骨架 · 按风险配置发布策略</span><span>纯前端原型 · 所有操作仅保存在此浏览器</span></footer>
+    <footer><a href="#" data-action="view" data-view="workspace">Agent Studio</a><span>统一骨架 · 按风险配置发布策略</span></footer>
   </div>
   <div id="toast" role="status" aria-live="polite"></div>
   <dialog id="modal"><div id="modal-body"></div><button class="btn secondary modal-close" data-action="close-modal">关闭</button></dialog>
-  <script src="app.js?v=2"></script>
+  <script src="app.js?v=4"></script>
 </body>
 </html>
